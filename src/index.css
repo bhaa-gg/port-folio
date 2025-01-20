@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: "Inter", sans-serif;
+}
+
+.curs-pointer {
+  cursor: pointer;
+}
+
+.bgRgba {
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0%;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+
+
+
+
+.haveHover:hover .bgRgba {
+  opacity: 1;
+
+}
+
+.demo {
+  transition: 0.2s;
+}
+
+
+.demo:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.field {
+  transition: 0.2s;
+  background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.field:hover,
+.field:focus {
+
+  border-color: rgba(0, 0, 255, 0.5);
+}
+
+.btns {
+  transition: 0.2s;
+}
+
+.btns:hover {
+  transform: scale(1.1);
+}
+
+.cv {
+  transition: 0.2s;
+}
+
+.cv:hover {
+  transform: scale(1.1);
+}
+
+.toUp {
+  transition: all 0.6s !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.toUp:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#DtuImg {
+  transition: all 0.5s;
+}
+
+.Card :hover #DtuImg {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.myColor {
+  background-color: radial-gradient("125%_125%_at_50%_10%, #000_40%, #63e_100%");
+}
