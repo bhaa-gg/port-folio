@@ -1,19 +1,24 @@
 import React from 'react'
-import { EXPERIENCES } from '../../constants'
 import cres from "../../assets/Cre/Screenshot (382).png";
 import { motion } from "framer-motion"
 
 import { PiShootingStarLight } from "react-icons/pi";
+import '../../i18next';
+import { useTranslation } from 'react-i18next';
 
 
 const Experince = ({ Dark }) => {
+        const { t  } = useTranslation();
+        const experienceAsArray = t("experience.data", { returnObjects: true });
+        
+
     return (
         <div>
             <div className={`border-b ${Dark ? "border-white" : "border-black"} pb-4`}>
-                <h2 className='my-20 text-center flex items-center justify-center text-4xl' > <PiShootingStarLight className='mx-2 ' /> Experience</h2>
+                <h2 className='my-20 text-center flex items-center justify-center text-4xl' > <PiShootingStarLight className='mx-2 ' /> {t("experience.head")}</h2>
                 <div className="">
                     {
-                        EXPERIENCES.map((val, i) => {
+                        experienceAsArray.map((val, i) => {
                             return <div key={i} className="mb-8 flex items-center gap-y-7 lg:gap-y-0  flex-wrap lg:justify-around">
                                 <motion.div
                                     whileInView={{ opacity: 1, y: 0 }}

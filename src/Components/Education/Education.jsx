@@ -1,14 +1,20 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import '../../i18next';
 
 const Education = ({ Dark }) => {
+    const { t } = useTranslation();
+
     return (
         <div id='Tutorial' className={`lg:mb-36 border-b ${Dark ? "border-white" : "border-black"} pb-4`} >
             <motion.h2
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ y: -100, opacity: 0 }}
                 transition={{ duration: 1.5 }}
-                className='my-20 text-center text-4xl' ><i class="fa-solid fa-graduation-cap"></i> My Education</motion.h2>
+                className='my-20 text-center text-4xl' ><i class="fa-solid fa-graduation-cap"></i> 
+                        {t("Education.head")}
+                        </motion.h2>
 
 
             <motion.div
@@ -26,13 +32,13 @@ const Education = ({ Dark }) => {
                 </div>
                 <div className={`  w-full md:w-[80%] mx-auto py-3 ${Dark ? "text-white" : "text-black"} `}>
                     <h2 className='text-2xl font-bold' >
-                        Student in Technology
+                        {t("Education.what")}
                     </h2>
                     <p >
-                        Delta University For Science & Technology
+                        {t("Education.where")}
                     </p>
                     <p>
-                        2022 - 2026
+                        {t("Education.when")}
                     </p>
                 </div>
             </motion.div>

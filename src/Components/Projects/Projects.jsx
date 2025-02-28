@@ -1,22 +1,51 @@
-import React, { useState } from 'react'
-import { PROJECTS, All, backEnd } from '../../constants'
+import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion"
+import VideoComponent from '../VideoComponent/VideoComponent '
+import Slider from "react-slick";
+import { BiSolidVideos } from "react-icons/bi";
+import '../../i18next';
+import { useTranslation } from 'react-i18next';
+import { PROJECTSVideos_ar } from '../../constants';
+
+
+
 
 const Projects = ({ Dark }) => {
-    const [Projects, setProjects] = useState(PROJECTS)
+    const { t, i18n } = useTranslation();
+
+    const my_PROJECTS = t("Projects.data.front", { returnObjects: true });
+    const my_backEnd = t("Projects.data.back", { returnObjects: true });
+    const my_All = t("Projects.data.all", { returnObjects: true });
+    const my_PROJECTSVideos = t("Projects.data.PROJECTSVideos", { returnObjects: true });
+
+    const [Projects, setProjects] = useState(my_PROJECTS)
+
+    const settings = {
+        className: "center",
+        infinite: true,
+        fade: true,
+        waitForAnimate: false,
+        slidesToShow: 1,
+        speed: 500,
+    };
+
+    useEffect(() => {
+        setProjects(my_PROJECTS)
+    }, [i18n.language])
+
     return (
         <div className={`border-b ${Dark ? "border-white" : "border-black"} pb-4`} >
             <motion.h2
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ y: -100, opacity: 0 }}
                 transition={{ duration: 1.5 }}
-                className='my-20 text-center text-4xl' >Projects</motion.h2>
+                className='my-20 text-center text-4xl' >{t("Projects.head")}</motion.h2>
             <div className="">
                 <div className="flex mb-5 items-center justify-center">
                     <ul className='mb-5 p-2 flex gap-4 items-center justify-center text-2xl text-white ' >
-                        <li onClick={() => setProjects(PROJECTS)} className={`curs-pointer ${Dark ? "text-white" : "text-black"}  transition-all  py-1 px-2 rounded  ${Projects[0].type === "Front" ? " text-black" : ""} `} >Front End</li>
-                        <li onClick={() => setProjects(backEnd)} className={`curs-pointer ${Dark ? "text-white" : "text-black"}  transition-all  py-1 px-2 rounded  ${Projects[0].type === "Back" ? " text-black" : ""} `} >Back End</li>
-                        <li onClick={() => setProjects(All)} className={`curs-pointer ${Dark ? "text-white" : "text-black"}  transition-all  py-1 px-2 rounded  ${Projects[0].type === "All" ? " text-black" : ""} `} >All</li>
+                        <li onClick={() => setProjects(my_PROJECTS)} className={`curs-pointer ${Dark ? "text-white" : "text-black"}  transition-all  py-1 px-2 rounded  ${Projects[0].type === "Front" ? " text-black" : ""} `} >{t("Projects.front")}</li>
+                        <li onClick={() => setProjects(my_backEnd)} className={`curs-pointer ${Dark ? "text-white" : "text-black"}  transition-all  py-1 px-2 rounded  ${Projects[0].type === "Back" ? " text-black" : ""} `} >  {t("Projects.back")} </li>
+                        <li onClick={() => setProjects(my_All)} className={`curs-pointer ${Dark ? "text-white" : "text-black"}  transition-all  py-1 px-2 rounded  ${Projects[0].type === "All" ? " text-black" : ""} `} >       {t("Projects.all")}</li>
                     </ul>
                 </div>
                 {
@@ -53,6 +82,19 @@ const Projects = ({ Dark }) => {
                         : <h1>No Projects Now</h1>
                 }
             </div>
+            {i18n.language == "en" && <div className="">
+
+                <motion.h2
+                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: -100, opacity: 0 }}
+                    transition={{ duration: 1.5 }}
+                    className='my-20 border-b flex items-center justify-center  pb-5 text-4xl' >{t("Projects.OtherProjects")} <BiSolidVideos className='mx-2' /></motion.h2>
+                <Slider {...settings}>
+                    {my_PROJECTSVideos.map((vi, i) => (
+                        <VideoComponent key={i} title={vi.title} src={vi.src} />
+                    ))}
+                </Slider>
+            </div>}
         </div>
     )
 }

@@ -1,9 +1,14 @@
 import React from 'react'
 import { HERO_CONTENT } from './../../constants/index';
 import { motion } from "framer-motion"
-import myImg from "../../assets/423239556_3522830081301886_5803025320462055495_n.jpg"
+import myImg from "../../assets/me.jpg"
 import { Cursor, Typewriter } from 'react-simple-typewriter'
+import { useTranslation } from 'react-i18next';
+import '../../i18next';
+
 function Hero({ Dark }) {
+    const { t  , i18n} = useTranslation();
+
     const container = (delay, aft_x) => ({
         hidden: { x: aft_x, opacity: 0 },
         visible: {
@@ -22,16 +27,16 @@ function Hero({ Dark }) {
                             variants={container(0, -100)}
                             initial="hidden"
                             animate="visible"
-                            className={`pb-16 text-6xl ${Dark ? "text-white" : "text-black"} font-thin tracking-tight lg:mt-16 lg:text-8xl `}>Bhaa Wafy</motion.h1>
+                            className={`pb-16 text-6xl ${Dark ? "text-white" : "text-black"} font-thin tracking-tight lg:mt-16 lg:text-8xl `}>{t("hero.name")}</motion.h1>
                         <motion.span variants={container(0.5, -100)}
                             initial="hidden"
                             animate="visible" className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500
                         text-4xl bg-clip-text tracking-tighter text-transparent">
-                            I'am a
+                            {t("hero.typeWriterWords")}
                             <span className=' ms-2 tracking-tighter ' >
 
                                 <Typewriter
-                                    words={['Software Developer', 'Web Developer', 'Mern Stack Developer']}
+                                    words={i18n.language === "ar" ? ["مطور برمجيات", "مطور ويب"] : ['Software Developer', 'Web Developer', 'Mern Stack Developer']}
                                     loop={true}
                                     cursorStyle='_'
                                     typeSpeed={70}
@@ -46,7 +51,7 @@ function Hero({ Dark }) {
                             variants={container(1, -100)}
                             initial="hidden"
                             animate="visible"
-                            className={` ${Dark ? "text-white" : "text-black"} my-2 max-w-xl py-6 font-light tracking-tighter`}>{HERO_CONTENT}
+                            className={` ${Dark ? "text-white" : "text-black"} my-2 max-w-xl py-6 font-light tracking-tighter word-spacing-[0.5rem] `}>{t("hero.HERO_CONTENT")}
                         </motion.p>
                         <motion.a
                             whileInView={{ rotate: [-5, 0, 5, 0, -5] }}
@@ -54,7 +59,7 @@ function Hero({ Dark }) {
                             transition={{ duration: 2, repeat: Infinity }}
                             download
                             href='https://drive.usercontent.google.com/download?id=1a6_60-IJ30VXTVRqGN1EDyLo6hqYwCqn&export=download&authuser=0&confirm=t&uuid=c9d3b413-b89e-42f7-a310-d9bbb3061280&at=APvzH3qNqJLvO2qAnwXNDbtXCWLs:1735240417442' className=' cv my-2 p-3 rounded-lg bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500
-                        tracking-tighter text-black font-bold' >Download My Cv</motion.a>
+                        tracking-tighter text-black font-bold' >{t("hero.cv")}</motion.a>
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 lg:p-8">

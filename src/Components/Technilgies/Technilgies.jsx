@@ -15,6 +15,8 @@ import { FaNode } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { FaShieldCat } from "react-icons/fa6";
 import { MdSmartToy } from "react-icons/md";
+import '../../i18next';
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -22,6 +24,8 @@ import { MdSmartToy } from "react-icons/md";
 
 
 const Technilgies = (duration, Dark) => {
+    const { t } = useTranslation();
+
     const container = (duration) => ({
         initial: { y: -10 },
         animate: {
@@ -41,7 +45,7 @@ const Technilgies = (duration, Dark) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ y: -100, opacity: 0 }}
                 transition={{ duration: 1.5 }} className='my-20 flex items-end justify-center text-center text-4xl' >
-                < MdSmartToy className='mx-2' /> Technologies</motion.h2>
+                < MdSmartToy className='mx-2' /> {t("Technologies")}</motion.h2>
 
             <motion.div
                 whileInView={{ opacity: 1, x: 0 }}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useTransition } from 'react'
 import Nav from './Components/Nav/Nav'
 import Hero from './Components/Hero/Hero';
 import Apout from './Components/Apout/Apout';
@@ -11,8 +11,13 @@ import { motion } from 'framer-motion';
 import Education from './Components/Education/Education';
 import NavMobile from './Components/NavMobile/NavMobile';
 import Experince from './Components/Experince/Experince';
+import { useTranslation } from 'react-i18next';
+import  './i18next';
 
 function App() {
+  const { i18n  } = useTranslation();
+
+
   const [Scrool, setScrool] = useState(0);
   const [Dark, setDark] = useState(true);
   useEffect(() => {
@@ -21,7 +26,7 @@ function App() {
     })
   }, [])
   return (
-    <>
+    <div dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       {/* #fff */}
       <div className='overflow-x-hidden  text-neutral-300 antialiased selection:bg-blue-900 selection:text-white'>
         <div className="fixed top-0 -z-10 w-full h-full ">
@@ -49,7 +54,7 @@ function App() {
           <Contact Dark={Dark} />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

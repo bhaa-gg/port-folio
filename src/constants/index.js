@@ -27,6 +27,27 @@ export const EXPERIENCES = [
 
 ];
 
+export const PROJECTSVideos = [
+  {
+    title: "Super Market Management",
+    src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7291116439153893382?compact=1",
+  },
+  {
+    title: "Bw Book",
+    src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7271298034263629825?compact=1",
+  },
+  {
+    title: "Udemy Application",
+    src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7237250289823608832?compact=1",
+  },
+  {
+    title: "Socket io Application",
+    src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7234459206437789696?compact=1",
+  },
+
+
+
+]
 export const PROJECTS = [
   {
     type: "Front",
@@ -106,11 +127,16 @@ export const backEnd = [
     technologies: ["Express", "JWT", "Node.js", "Mongoose", "MongoDb", "stripe", "Socket.io", "Cloudinary"],
   },
 ]
+
 const Alls = JSON.parse(JSON.stringify(PROJECTS.concat(backEnd)));
 export const All = Alls.map((e) => {
   e.type = "All"
   return e
 })
+
+
+
+
 export const Other = [
   {
     type: "Other",
@@ -123,3 +149,107 @@ export const CONTACT = {
   email: "bhaatiti281@gmail.com",
 };
 
+
+
+export const PROJECTSVideos_ar = [
+  {
+    title: "إدارة السوبر ماركت",
+    src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7291116439153893382?compact=1",
+  },
+  {
+    title: "Bw Book",
+    src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7271298034263629825?compact=1",
+  },
+  {
+    title: "تطبيق Udemy",
+    src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7237250289823608832?compact=1",
+  },
+  {
+    title: "تطبيق Socket.io",
+    src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7234459206437789696?compact=1",
+  },
+];
+
+export const PROJECTS_ar = [
+  {
+    type: "الواجهة الأمامية",
+    title: "عربة التسوق الطازجة",
+    image: project1,
+    demo: "https://ecommerc-pop.netlify.app",
+    description:
+      "تطبيق Fresh Cart، وجهتك المثالية للتسوق عبر الإنترنت للمواد الغذائية الطازجة والأساسيات اليومية. تم تصميمه لجعل تجربة التسوق الخاصة بك سلسة وممتعة، حيث يوفر مجموعة واسعة من المنتجات عالية الجودة يتم توصيلها مباشرة إلى باب منزلك.",
+    technologies: ["HTML", "CSS", "React", "React Hooks", "Bootstrap"],
+  },
+  {
+    type: "الواجهة الأمامية",
+    title: "تطبيق الطقس",
+    image: project2,
+    demo: "https://bhaa-gg.github.io/Bh_WetherApp/",
+    description:
+      "يعرض هذا الموقع حالة الطقس لمدة 3 أيام، ويمكنك البحث عن طريق إدخال اسم مدينتك.",
+    technologies: ["HTML", "CSS", "JavaScript", " Weather Api"],
+  },
+  {
+    type: "الواجهة الأمامية",
+    title: "مدير العلامات المرجعية",
+    image: project3,
+    demo: "https://bhaa-gg.github.io/Bh_Bookmarker/",
+    description:
+      "يمكن للمستخدم إدخال اسم العلامة المرجعية ورابط الموقع وحفظه في جدول، ويمكنه زيارة الموقع وإجراء تعديلات على الاسم أو الرابط، وكذلك حذف العلامات المرجعية.",
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+  },
+  {
+    type: "الواجهة الأمامية",
+    title: "تطبيق Yummy",
+    image: project4,
+    demo: "https://bhaa-gg.github.io/Bh_Yummy/",
+    description:
+      "يعرض هذا الموقع بعض الوجبات وكيفية تحضيرها من خلال المقالات واليوتيوب، كما يعرض الوجبات الخاصة بالمناطق المختلفة، ويمكن البحث عن وجبة معينة بإدخال الحرف الأول أو اسم الوجبة.",
+    technologies: ["HTML", "CSS", "JQuery", "JavaScript", "Bootstrap"],
+  },
+  {
+    type: "الواجهة الأمامية",
+    title: "تسجيل الدخول الذكي",
+    image: project6,
+    demo: "https://bhaa-gg.github.io/Bh-SmartLoginSystem/",
+    description:
+      "يمكن للمستخدم التسجيل عبر البريد الإلكتروني والاسم وكلمة المرور، ثم تسجيل الدخول إلى صفحته الخاصة.",
+    technologies: ["HTML", "CSS", "JavaScript", "Regex", "Sweetalert"],
+  },
+  {
+    type: "الواجهة الأمامية",
+    title: "تطبيق الملاحظات",
+    image: project5,
+    demo: "https://note-bhaa.netlify.app/",
+    description:
+      "يوفر هذا الموقع للمستخدم إمكانية تدوين ملاحظاته دون فقدان البيانات.",
+    technologies: ["HTML", "CSS", "React", "Font awesome"],
+  },
+];
+
+export const backEnd_ar = [
+  {
+    type: "الواجهة الخلفية",
+    title: "تطبيق البحث عن الوظائف",
+    image: "https://assets.roadmap.sh/guest/backend-project-ideas-zxutw.jpg",
+    demo: "https://github.com/bhaa-gg/jop_Search",
+    description:
+      "إنشاء موقع يشبه LinkedIn للبحث عن الوظائف.",
+    technologies: ["Express", "Sequelize", "JWT", "Node.js"],
+  },
+  {
+    type: "الواجهة الخلفية",
+    title: "تطبيق التجارة الإلكترونية",
+    image: "https://assets.roadmap.sh/guest/backend-project-ideas-zxutw.jpg",
+    demo: "https://github.com/bhaa-gg/BK_Ecommerce",
+    description:
+      "نظام خلفي آمن وقابل للتطوير لتطبيق التجارة الإلكترونية، يدعم تسجيل المستخدمين، إدارة المنتجات، معالجة الطلبات، تكامل الدفع، والإشعارات الفورية.",
+    technologies: ["Express", "JWT", "Node.js", "Mongoose", "MongoDB", "Stripe", "Socket.io", "Cloudinary"],
+  },
+];
+
+const Alls_ar = JSON.parse(JSON.stringify(PROJECTS_ar.concat(backEnd_ar)));
+export const All_ar = Alls_ar.map((e) => {
+  e.type = "All"
+  return e
+})
