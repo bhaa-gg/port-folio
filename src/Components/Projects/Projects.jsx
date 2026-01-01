@@ -43,9 +43,47 @@ const Projects = ({ Dark }) => {
             <div className="">
                 <div className="flex mb-5 items-center justify-center">
                     <ul className='mb-5 p-2 flex gap-4 items-center justify-center text-2xl text-white ' >
-                        <li onClick={() => setProjects(my_PROJECTS)} className={`curs-pointer ${Dark ? "text-white" : "text-black"}  transition-all  py-1 px-2 rounded  ${Projects[0].type === "Front" ? " text-black" : ""} `} >{t("Projects.front")}</li>
-                        <li onClick={() => setProjects(my_backEnd)} className={`curs-pointer ${Dark ? "text-white" : "text-black"}  transition-all  py-1 px-2 rounded  ${Projects[0].type === "Back" ? " text-black" : ""} `} >  {t("Projects.back")} </li>
-                        <li onClick={() => setProjects(my_All)} className={`curs-pointer ${Dark ? "text-white" : "text-black"}  transition-all  py-1 px-2 rounded  ${Projects[0].type === "All" ? " text-black" : ""} `} >       {t("Projects.all")}</li>
+                        <li
+                            onClick={() => setProjects(my_PROJECTS)}
+                            className={`cursor-pointer transition-all py-1 px-2 rounded ${Dark
+                                    ? Projects[0].type.toLowerCase() === "front"
+                                        ? "bg-gray-700 text-blue-400"
+                                        : "text-gray-200 hover:bg-gray-800"
+                                    : Projects[0].type.toLowerCase() === "front"
+                                        ? "bg-white text-blue-500"
+                                        : "text-gray-800 hover:bg-gray-100"
+                                }`}
+                        >
+                            {t("Projects.front")}
+                        </li>
+
+                        <li
+                            onClick={() => setProjects(my_backEnd)}
+                            className={`cursor-pointer transition-all py-1 px-2 rounded ${Dark
+                                    ? Projects[0].type.toLowerCase() === "back"
+                                        ? "bg-gray-700 text-blue-400"
+                                        : "text-gray-200 hover:bg-gray-800"
+                                    : Projects[0].type.toLowerCase() === "back"
+                                        ? "bg-white text-blue-500"
+                                        : "text-gray-800 hover:bg-gray-100"
+                                }`}
+                        >
+                            {t("Projects.back")}
+                        </li>
+
+                        <li
+                            onClick={() => setProjects(my_All)}
+                            className={`cursor-pointer transition-all py-1 px-2 rounded ${Dark
+                                    ? Projects[0].type.toLowerCase() === "all"
+                                        ? "bg-gray-700 text-blue-400"
+                                        : "text-gray-200 hover:bg-gray-800"
+                                    : Projects[0].type.toLowerCase() === "all"
+                                        ? "bg-white text-blue-500"
+                                        : "text-gray-800 hover:bg-gray-100"
+                                }`}
+                        >
+                            {t("Projects.all")}
+                        </li>
                     </ul>
                 </div>
                 {
@@ -58,6 +96,7 @@ const Projects = ({ Dark }) => {
                                     transition={{ duration: 0.2 }}
                                     className=" haveHover w-full overflow-hidden lg:me-10 lg:w-[46%]    ">
                                     <a href={val.demo} target='_blank'>
+
                                         <img src={val.image} className='w-full m-auto mb-6 rounded-md xl:m-0 hover:scale-105 transition-all   ' alt={val.title} />
                                     </a>
                                 </motion.div>

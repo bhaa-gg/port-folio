@@ -13,10 +13,8 @@ import NavMobile from './Components/NavMobile/NavMobile';
 import Experince from './Components/Experince/Experince';
 import { useTranslation } from 'react-i18next';
 import  './i18next';
-
 function App() {
   const { i18n  } = useTranslation();
-
 
   const [Scrool, setScrool] = useState(0);
   const [Dark, setDark] = useState(true);

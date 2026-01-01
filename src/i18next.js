@@ -28,7 +28,7 @@ i18next.use(initReactI18next).init({
                     typeWriterWords: `I'am`,
                     name: "Bahaa Wafy",
                     HERO_CONTENT: `
-                    I'm a Third-year IT Student My position is Mern Stack  Developer specializing in React.js , Next.js , Node.js and MongoDB My
+                    I'm a Fourth-year IT Student My position is Mern Stack  Developer specializing in React.js , Next.js , Node.js and MongoDB My
 coding wand crafts enchanting, user-focused web experiences, blending innovation and functionality into
 seamless interaction. Driven by a passion for the extraordinary, every line of code I write is a step towards
 redefining the ordinary.
