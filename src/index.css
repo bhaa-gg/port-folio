@@ -3,9 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .curs-pointer {
@@ -19,19 +18,13 @@
   transition: all 0.2s;
 }
 
-
-
-
-
 .haveHover:hover .bgRgba {
   opacity: 1;
-
 }
 
 .demo {
   transition: 0.2s;
 }
-
 
 .demo:hover {
   background-color: rgba(0, 0, 0, 0.5);
@@ -41,12 +34,10 @@
 .field {
   transition: 0.2s;
   background-color: rgba(0, 0, 0, 0.3);
-
 }
 
 .field:hover,
 .field:focus {
-
   border-color: rgba(0, 0, 255, 0.5);
 }
 
@@ -89,27 +80,26 @@ html {
 }
 
 .myColor {
-  background-color: radial-gradient("125%_125%_at_50%_10%, #000_40%, #63e_100%");
+  background-color: radial-gradient('125%_125%_at_50%_10%, #000_40%, #63e_100%');
 }
-
 
 /* Custom scrollbar styling */
 ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+  width: 10px; /* Width of the scrollbar */
 }
 
 /* Scrollbar track (background) */
 ::-webkit-scrollbar-track {
-    background: #ffffff; /* White background for the track */
+  background: #ffffff; /* White background for the track */
 }
 
 /* Scrollbar thumb (position bar) */
 ::-webkit-scrollbar-thumb {
-    background: rgb(67, 67, 255); /* Blue color for the thumb */
-    border-radius: 5px; /* Rounded edges for the thumb */
+  background: rgb(67, 67, 255); /* Blue color for the thumb */
+  border-radius: 5px; /* Rounded edges for the thumb */
 }
 
 /* Optional: Hover effect for the thumb */
 ::-webkit-scrollbar-thumb:hover {
-    background: #0000cc; /* Slightly darker blue on hover */
+  background: #0000cc; /* Slightly darker blue on hover */
 }

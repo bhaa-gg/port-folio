@@ -19,7 +19,7 @@ function Hero({ Dark }) {
   })
 
   return (
-    <div id="Home" className={`lg:mb-36 border-b ${Dark ? 'border-white' : 'border-black'} pb-4`}>
+    <div id="Home" className={`lg:mb-36 border-b  min-h-screen ${Dark ? 'border-white' : 'border-black'} `}>
       <div className=" flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
@@ -72,8 +72,10 @@ function Hero({ Dark }) {
               whileInView={{ rotate: [-5, 0, 5, 0, -5] }}
               whileHover={{ rotate: [0, 0, 0, 0, 0], scale: 1.1 }}
               transition={{ duration: 2, repeat: Infinity }}
+              target="_blank"
               download
-              href="https://api.cloudinary.com/v1_1/dlzkz7mdq/image/download?api_key=735117441361392&attachment=true&audit_context=eyJhY3Rvcl90eXBlIjoidXNlciIsImFjdG9yX2lkIjoiOTM0ZDc5NjM5MjUyYWRjM2UxYTcyNjFjNjU0NTJiN2MiLCJ1c2VyX2V4dGVybmFsX2lkIjoiZTZlNjBmZjUyMDZkY2I3MzI1OWIyOWNjMGU0NWJjIiwidXNlcl9jdXN0b21faWQiOiJiaGFhdGl0aTI4MUBnbWFpbC5jb20iLCJjb21wb25lbnQiOiJjb25zb2xlIn0%3D&public_id=BahaaWafyCv_Full_vpjgnx&signature=d130254e84fb0bbea96925e293b94bed3a814786&source=ml&target_filename=BahaaWafyCv_Full_vpjgnx&timestamp=1767228421&type=upload"
+              href="
+https://api.cloudinary.com/v1_1/dlzkz7mdq/image/download?api_key=735117441361392&attachment=true&audit_context=eyJhY3Rvcl90eXBlIjoidXNlciIsImFjdG9yX2lkIjoiOTM0ZDc5NjM5MjUyYWRjM2UxYTcyNjFjNjU0NTJiN2MiLCJ1c2VyX2V4dGVybmFsX2lkIjoiZTZlNjBmZjUyMDZkY2I3MzI1OWIyOWNjMGU0NWJjIiwidXNlcl9jdXN0b21faWQiOiJiaGFhdGl0aTI4MUBnbWFpbC5jb20iLCJjb21wb25lbnQiOiJjb25zb2xlIn0%3D&public_id=BahaaWafyCv_Full_vpjgnx&signature=5bfe1f1be6a343d0a6bd9d8ffcea2880f11ccafb&source=ml&target_filename=BahaaWafyCv_Full_vpjgnx&timestamp=1767320926&type=upload"
               className=" cv my-2 p-3 rounded-lg bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500
                         tracking-tighter text-black font-bold"
             >

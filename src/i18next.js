@@ -24,7 +24,7 @@ i18next.use(initReactI18next).init({
           Home: 'Home',
           Tutorial: 'Tutorial',
           Contact: 'Contact',
-          name: 'BW',
+          name: 'Bw',
           lang: [
             { code: 'en', name: 'English' },
             { code: 'ar', name: 'Arabic' },
@@ -33,12 +33,11 @@ i18next.use(initReactI18next).init({
         hero: {
           cv: 'Download My Cv',
           typeWriterWords: `I'am`,
-          name: 'Bahaa Wafy',
+          name1: 'Bahaa',
+          name2: 'Wafy',
+          name3: 'Abdelfatah',
           HERO_CONTENT: `
-                    I'm a Fourth-year IT Student My position is Mern Stack  Developer specializing in React.js , Next.js , Node.js and MongoDB My
-coding wand crafts enchanting, user-focused web experiences, blending innovation and functionality into
-seamless interaction. Driven by a passion for the extraordinary, every line of code I write is a step towards
-redefining the ordinary.
+                    Passionate Frontend Developer building responsive and user-friendly web applications with strong focus on UI/UX, performance, clean code, and SEO optimization.
                     `,
         },
         About: {

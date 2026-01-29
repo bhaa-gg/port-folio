@@ -12,7 +12,7 @@ function Nav({ Dark, setDark }) {
         <h1
           className={` ${!Dark ? 'text-black' : 'text-white'} font-bold text-4xl  cursor-pointer`}
         >
-          {t('nav.name')}
+          {t('nav.name')}<spam className="text-blue-800" >.</spam>
         </h1>
       </div>
       <ul className="flex gap-4 items-center justify-center text-2xl text-white  ">
