@@ -1,7 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import '../../i18next'
-import LanguageSwitcher from './../LanguageSwitcher/LanguageSwitcher';
 
 function Nav({ Dark, setDark }) {
   const { t } = useTranslation()
