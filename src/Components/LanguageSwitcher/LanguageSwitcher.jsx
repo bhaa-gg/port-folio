@@ -6,7 +6,7 @@ export function LanguageSwitcher() {
   const { i18n, t } = useTranslation()
   const languages = t('nav.lang', { returnObjects: true })
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [, setIsOpen] = useState(false)
   const dropdownRef = useRef(null)
 
   const handleChange = (e) => {

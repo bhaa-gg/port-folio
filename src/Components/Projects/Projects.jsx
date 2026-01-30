@@ -27,7 +27,7 @@ const Projects = ({ Dark }) => {
 
   useEffect(() => {
     setProjects(my_PROJECTS)
-  }, [i18n.language ])
+  }, [i18n.language, my_PROJECTS])
 
   return (
     <div className={`border-b ${Dark ? 'border-white' : 'border-black'} pb-4`}>
@@ -129,7 +129,7 @@ const Projects = ({ Dark }) => {
           <h1>No Projects Now</h1>
         )}
       </div>
-      {i18n.language == 'en' && (
+      {i18n.language === 'en' && (
         <div className="">
           <motion.h2
             whileInView={{ opacity: 1, y: 0 }}
