@@ -19,7 +19,10 @@ function Hero({ Dark }) {
   })
 
   return (
-    <div id="Home" className={`lg:mb-36 border-b  min-h-screen ${Dark ? 'border-white' : 'border-black'} `}>
+    <div
+      id="Home"
+      className={`lg:mb-36 border-b  min-h-screen ${Dark ? 'border-white' : 'border-black'} `}
+    >
       <div className=" flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
@@ -90,7 +93,7 @@ https://api.cloudinary.com/v1_1/dlzkz7mdq/image/download?api_key=735117441361392
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: '100%' }}
               transition={{ duration: 1 }}
-              src={me}
+              src={'https://res.cloudinary.com/dlzkz7mdq/image/upload/v1769728472/o_jxkpdg.png'}
               alt="ing"
             />
           </div>

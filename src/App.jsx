@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useTransition } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from './Components/Nav/Nav'
-import Hero from './Components/Hero/Hero'
-import Apout from './Components/Apout/Apout'
+import About from './Components/Apout/Apout'
 import Technilgies from './Components/Technilgies/Technilgies'
 import Projects from './Components/Projects/Projects'
 import Contact from './Components/Contact/Contact'
@@ -17,16 +16,16 @@ import HeroNew from './Components/HeroNew/HeroNew'
 function App() {
   const { i18n } = useTranslation()
 
-  const [Scrool, setScrool] = useState(0)
+  const [Scroll, setScroll] = useState(0)
   const [Dark, setDark] = useState(true)
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      setScrool(window.scrollY)
+      setScroll(window.scrollY)
     })
 
     return () => {
       window.removeEventListener('scroll', () => {
-        setScrool(window.scrollY)
+        setScroll(window.scrollY)
       })
     }
   }, [])
@@ -35,24 +34,27 @@ function App() {
       <div className="overflow-x-hidden  text-neutral-300 antialiased selection:bg-blue-900 selection:text-white">
         <div className="fixed top-0 -z-10 w-full h-full ">
           <div
-            className={`absolute inset-0 -z-10 h-full w-full items-center ${
-              Dark ? 'text-black' : ''
-            } px-5 py-24 ${
-              Dark
-                ? '[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]'
-                : '[background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]'
-            } `}
-          ></div>
+            className={`
+    absolute inset-0 -z-10 h-full w-full
+    transition-all duration-700 ease-in-out
+
+    ${
+      Dark
+        ? '[background:radial-gradient(120%_120%_at_50%_15%,#0b0b0f_35%,#3b1d6a_75%,#000_100%)]'
+        : '[background:radial-gradient(120%_120%_at_50%_15%,#ffffff_30%,#e9e6ff_60%,#c7bfff_100%)]'
+    }
+  `}
+          />
         </div>
         <div className="container mx-auto px-8  ">
           <motion.a
             initial={{ opacity: 0 }}
             whileInView={{ y: [0, 15, 20, 25, 10, 5, 0] }}
-            animate={{ opacity: Scrool >= 175 ? 1 : 0 }}
+            animate={{ opacity: Scroll >= 175 ? 1 : 0 }}
             transition={{ duration: 2, repeat: Infinity }}
             href="#ups"
             className={`toUp z-50  transition-all  ${
-              Scrool <= 175 ? 'hidden' : ''
+              Scroll <= 175 ? 'hidden' : ''
             } bg-zinc-700 cursor-pointer fixed p-2  rounded-full bottom-5 flex  right-5 `}
           >
             <PiArrowFatUpDuotone className="text-white text-3xl " />
@@ -61,7 +63,7 @@ function App() {
           <Nav Dark={Dark} setDark={setDark} />
           {/* <NavMobile Dark={Dark} /> */}
           <HeroNew Dark={Dark} />
-          <Apout Dark={Dark} />
+          <About Dark={Dark} />
           <Experince Dark={Dark} />
           <Technilgies Dark={Dark} />
           <Education Dark={Dark} />

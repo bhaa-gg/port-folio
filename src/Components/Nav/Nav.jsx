@@ -10,9 +10,11 @@ function Nav({ Dark, setDark }) {
     <nav id="ups" className="flex items-center justify-between     py-3">
       <div>
         <h1
-          className={` ${!Dark ? 'text-black' : 'text-white'} font-bold text-4xl  cursor-pointer`}
+          className={` ${!Dark ? 'text-black' : 'text-white'} font-bold 
+           text-4xl  cursor-pointer`}
         >
-          {t('nav.name')}<spam className="text-blue-800" >.</spam>
+          {t('nav.name')}
+          <spam className="text-blue-800">.</spam>
         </h1>
       </div>
       <ul className="flex gap-4 items-center justify-center text-2xl text-white  ">

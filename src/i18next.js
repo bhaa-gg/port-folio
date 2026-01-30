@@ -31,7 +31,9 @@ i18next.use(initReactI18next).init({
           ],
         },
         hero: {
-          cv: 'Download My Cv',
+          location:"Alexandria,Egypt",
+          mail:"bhaatiti281@gmail.com",
+          cv: 'Download Cv',
           typeWriterWords: `I'am`,
           name1: 'Bahaa',
           name2: 'Wafy',
