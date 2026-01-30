@@ -19,22 +19,26 @@ function Nav({ Dark, setDark }) {
       </div>
       <ul className="flex gap-4 items-center justify-center text-2xl text-white  ">
         <li>
-          <a target="_blank" href="//www.linkedin.com/in/bhaa-wafy-69005a298">
+          <a
+            href="//www.linkedin.com/in/bhaa-wafy-69005a298"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className={` ${!Dark ? 'text-black' : ''} cursor-pointer fa-brands fa-linkedin`}></i>
           </a>
         </li>
         <li>
-          <a target="_blank" href="//github.com/bhaa-gg/">
+          <a href="//github.com/bhaa-gg/" target="_blank" rel="noopener noreferrer">
             <i className={` ${!Dark ? 'text-black' : ''} cursor-pointer fa-brands fa-github`}></i>
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://wa.me/01210031428/">
+          <a href="https://wa.me/01210031428/" target="_blank" rel="noopener noreferrer">
             <i className={` ${!Dark ? 'text-black' : ''} fa-brands fa-whatsapp`}></i>
           </a>
         </li>
         <li>
-          <a target="_blank" href="//bhaatiti281@gmail.com/">
+          <a href="//bhaatiti281@gmail.com/" target="_blank" rel="noopener noreferrer">
             <i className={` ${!Dark ? 'text-black' : ''} fa-solid fa-envelope`}></i>
           </a>
         </li>
