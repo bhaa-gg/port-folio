@@ -28,10 +28,10 @@ function HeroNew({ Dark }) {
       dir={isRTL ? 'rtl' : 'ltr'}
       className={`
     min-h-[90vh] border-b
-    ${Dark ? 'border-white/40  text-white' : 'border-black/50  text-black'}
+    ${Dark ? 'border-white/40 py-4  text-white' : 'border-black/50  text-black'}
   `}
     >
-      <div className="flex min-h-[90vh] flex-col items-center justify-center text-center px-4">
+      <div className="flex  flex-col items-center justify-center text-center px-4">
         {/* Titles */}
         {titles.map((title, i) => (
           <motion.h1
