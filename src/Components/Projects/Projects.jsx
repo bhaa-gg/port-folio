@@ -27,7 +27,8 @@ const Projects = ({ Dark }) => {
 
   useEffect(() => {
     setProjects(my_PROJECTS)
-  }, [i18n.language, my_PROJECTS])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [i18n.language])
 
   return (
     <div className={`border-b ${Dark ? 'border-white' : 'border-black'} pb-4`}>
@@ -35,7 +36,7 @@ const Projects = ({ Dark }) => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
+        className="my-20 font-['Bebas_Neue'] text-5xl text-center flex items-center justify-center gap-2"
       >
         {t('Projects.head')}
       </motion.h2>
@@ -130,14 +131,15 @@ const Projects = ({ Dark }) => {
         )}
       </div>
       {i18n.language === 'en' && (
-        <div className="">
+        <div className="border-t min-h-screen">
           <motion.h2
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ y: -100, opacity: 0 }}
             transition={{ duration: 1.5 }}
-            className="my-20 border-b flex items-center justify-center  pb-5 text-4xl"
+            className="my-20  flex font-['Bebas_Neue'] text-5xl gap-2 items-center justify-center   "
           >
-            {t('Projects.OtherProjects')} <BiSolidVideos className="mx-2" />
+            <BiSolidVideos className="mx-2" />
+            {t('Projects.OtherProjects')}
           </motion.h2>
           <Slider {...settings}>
             {my_PROJECTSVideos.map((vi, i) => (

@@ -47,8 +47,15 @@ const Contact = ({ Dark }) => {
   return (
     <div id="Contact_Us" Dark>
       <div className="hed my-10 text-center  flex items-center justify-center text-4xl ">
-        <MdEmail className="mx-3" />
-        <h2 className="">{t('Contact.head')}</h2>
+        <motion.h2
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
+          className="flex items-center justify-center gap-2 font-['Bebas_Neue'] text-5xl"
+        >
+          <MdEmail className="" />
+          {t('Contact.head')}
+        </motion.h2>
       </div>
       <p className="text-center my-2 text-neutral-400">{t('Contact.title')}</p>
       <div className=" tracking-tighter  flex flex-wrap items-center justify-between">

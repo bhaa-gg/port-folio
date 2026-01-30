@@ -27,7 +27,7 @@ function HeroNew({ Dark }) {
       id="Home"
       dir={isRTL ? 'rtl' : 'ltr'}
       className={`
-    min-h-screen border-b
+    min-h-[90vh] border-b
     ${Dark ? 'border-white/40  text-white' : 'border-black/50  text-black'}
   `}
     >
@@ -127,7 +127,7 @@ function HeroNew({ Dark }) {
           {/* CV Button */}
           <div className="flex justify-center">
             <motion.a
-              href="https://drive.usercontent.google.com/download?id=1ea-23k68lVTCGzoCgGgNEmqw0Et7sqvM&export=download&authuser=0&confirm=t&uuid=b0d65224-81a7-4eed-ac16-213df01d86f7&at=APcXIO1ojUu2zHCCakasGCJB1smi:1769727907393"
+              href="https://drive.usercontent.google.com/download?id=15fk1kj_ZWBb8mCztiFNv5-ussFqbQtNV&export=download&authuser=0&confirm=t&uuid=6f074ccd-2573-41a0-aeda-d9b92c20eb0d&at=APcXIO3-lVsczDwKjpMXtM3-4TmA:1769803454661"
               target="_blank"
               download
               whileHover={{ scale: 1.08 }}

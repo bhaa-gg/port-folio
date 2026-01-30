@@ -1,7 +1,7 @@
 import React from 'react'
-import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher'
 import { useTranslation } from 'react-i18next'
 import '../../i18next'
+import LanguageSwitcher from './../LanguageSwitcher/LanguageSwitcher';
 
 function Nav({ Dark, setDark }) {
   const { t } = useTranslation()
@@ -17,6 +17,7 @@ function Nav({ Dark, setDark }) {
           <spam className="text-blue-800">.</spam>
         </h1>
       </div>
+
       <ul className="flex gap-4 items-center justify-center text-2xl text-white  ">
         <li>
           <a
@@ -37,20 +38,16 @@ function Nav({ Dark, setDark }) {
             <i className={` ${!Dark ? 'text-black' : ''} fa-brands fa-whatsapp`}></i>
           </a>
         </li>
-        <li>
-          <a href="//bhaatiti281@gmail.com/" target="_blank" rel="noopener noreferrer">
-            <i className={` ${!Dark ? 'text-black' : ''} fa-solid fa-envelope`}></i>
-          </a>
-        </li>
+
         <li>
           <p
             onClick={() => setDark(!Dark)}
             className={`${!Dark ? 'bg-black' : 'bg-white'} w-5 rounded-full curs-pointer h-5`}
           ></p>
         </li>
-        <li>
+        {/* <li>
           <LanguageSwitcher />
-        </li>
+        </li> */}
       </ul>
     </nav>
   )

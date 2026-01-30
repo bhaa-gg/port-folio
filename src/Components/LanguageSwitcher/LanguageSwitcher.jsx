@@ -1,41 +1,68 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import '../../i18next'
 
-export function LanguageSwitcher() {
-  const { i18n, t } = useTranslation()
-  const languages = t('nav.lang', { returnObjects: true })
+const languages = [
+  { code: 'en', label: 'EN' },
+  { code: 'ar', label: 'AR' },
+]
 
-  const [, setIsOpen] = useState(false)
-  const dropdownRef = useRef(null)
+const LanguageSwitcher = ({ Dark }) => {
+  const { i18n } = useTranslation()
+  const current = i18n.language
 
-  const handleChange = (e) => {
-    i18n.changeLanguage(e.target.value)
+  const changeLang = (lang) => {
+    if (lang !== current) {
+      i18n.changeLanguage(lang)
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'
+    }
   }
 
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false)
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [])
-
   return (
-    <select
-      onChange={handleChange}
-      value={i18n.language}
-      className="px-3 py-2 text-sm border rounded-md bg-white text-black 
-                 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    <div
+      className={`
+        relative flex items-center gap-1 p-1 rounded-full
+        backdrop-blur-xl border shadow-lg
+        bg-white border-white/20 shadow-white/5
+      `}
     >
+      {/* Sliding active indicator */}
+      <motion.div
+        layout
+        transition={{
+          type: 'spring',
+          stiffness: 350,
+          damping: 30,
+        }}
+        className={`
+          absolute inset-y-1 w-[48%] rounded-full
+          ${Dark ? 'bg-white/20' : 'bg-black/10'}
+        `}
+        style={{
+          left: '4px',
+        }}
+      />
+
       {languages.map((lang) => (
-        <option key={lang.code} value={lang.code}>
-          {lang.name}
-        </option>
+        <motion.button
+          key={lang.code}
+          onClick={() => changeLang(lang.code)}
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.95 }}
+          className={`
+            relative z-10 px-4 py-1.5 text-sm font-semibold rounded-full
+            transition-colors duration-300
+            ${
+              current !== lang.code
+                ? 'text-gray-300 hover:text-gray-600'
+                : 'text-gray-600 hover:text-black'
+            }
+          `}
+        >
+          {lang.label}
+        </motion.button>
       ))}
-    </select>
+    </div>
   )
 }
+
+export default LanguageSwitcher

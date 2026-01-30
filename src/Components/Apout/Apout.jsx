@@ -45,7 +45,7 @@ function About({ Dark }) {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: -80, opacity: 0 }}
         transition={{ duration: 0.6 }}
-        className="my-20 text-center text-4xl flex items-end justify-center gap-2"
+        className="my-20 text-center font-['Bebas_Neue'] text-5xl flex items-center justify-center gap-2"
       >
         <FaLaptopCode />
         {t('About.head.about')}
@@ -91,18 +91,42 @@ function About({ Dark }) {
         </motion.div>
 
         {/* Text */}
-        <div className="w-full lg:w-1/2">
-          <motion.p
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ x: 80, opacity: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className={`
-              max-w-xl text-xl leading-relaxed py-6
-              ${Dark ? 'text-gray-300' : 'text-gray-700'}
-            `}
+        <div className="w-full space-y-4 lg:w-1/2">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="text-8xl border-b-2 border-y-indigo-700 w-fit pe-5 rounded-sm hover:border-b-8 transition-all  font-['Bebas_Neue']"
           >
-            {t('About.title')}
-          </motion.p>
+            <p>Who</p>
+            <p>Am I</p>
+          </motion.div>
+          <div className="space-y-3">
+            <motion.p
+              initial={{ x: 200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-gray-300 text-xl capitalize"
+            >
+              {t('About.title_1')}
+            </motion.p>
+            <motion.p
+              initial={{ x: 200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-gray-300 text-xl capitalize"
+            >
+              {t('About.title_2')}
+            </motion.p>
+            <motion.p
+              initial={{ x: 200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="text-gray-300 text-xl capitalize"
+            >
+              {t('About.title_3')}
+            </motion.p>
+          </div>
         </div>
       </div>
     </section>

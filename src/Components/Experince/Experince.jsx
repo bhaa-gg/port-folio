@@ -13,7 +13,7 @@ const Experince = ({ Dark }) => {
   return (
     <div>
       <div className={`border-b ${Dark ? 'border-white' : 'border-black'} pb-4`}>
-        <h2 className="my-20 text-center flex items-center justify-center text-4xl">
+        <h2 className="my-20 text-center font-['Bebas_Neue'] text-5xl flex items-center justify-center ">
           {' '}
           <PiShootingStarLight className="mx-2 " /> {t('experience.head')}
         </h2>

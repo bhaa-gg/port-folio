@@ -31,8 +31,8 @@ i18next.use(initReactI18next).init({
           ],
         },
         hero: {
-          location:"Alexandria,Egypt",
-          mail:"bhaatiti281@gmail.com",
+          location: 'Alexandria,Egypt',
+          mail: 'bhaatiti281@gmail.com',
           cv: 'Download Cv',
           typeWriterWords: `I'am`,
           name1: 'Bahaa',
@@ -47,8 +47,9 @@ i18next.use(initReactI18next).init({
             about: 'About',
             me: 'Me',
           },
-          title: `
-I am a passionate MERN stack developer with a strong foundation in building full-stack applications. My expertise spans modern technologies like Next.js, React, Nest.js, MongoDB, Express, and JWT. With a focus on delivering efficient, scalable, and user-friendly solutions, I enjoy working on both front-end and back-end development. I'm always eager to explore new technologies and contribute to innovative projects that push the boundaries of web development`,
+          title_1: `Hey! I'm Bahaa Wafy, a passionate Full Stack Developer with hands-on experience building responsive, scalable, and user-friendly web applications using modern technologies.`,
+          title_2: `I have a strong focus on clean code, performance, UI/UX, and real-time systems. I'm always eager to contribute to innovative projects within dynamic teams. My expertise spans Next.js, React, Angular, Nest.js, Node.js, .NET, MongoDB, Express, and JWT.`,
+          title_3: `I am currently completing my Bachelor's degree in Computer Science Engineering at Delta Technological University, specializing in software engineering. I've also completed comprehensive Full Stack training programs at Route Academy, gaining practical experience in React.js, Next.js, Node.js, Angular, and .NET development.`,
         },
         experience: {
           head: 'Experience',

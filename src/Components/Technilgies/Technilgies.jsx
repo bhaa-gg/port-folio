@@ -36,21 +36,21 @@ const Technilgies = (duration, Dark) => {
     },
   })
   return (
-    <div id="Technology" className={`border-b ${Dark ? 'border-white' : 'border-black'} pb-4`}>
+    <div id="Technology" className={`border-b min-h-[80vh]  space-y-20 ${Dark ? 'border-white' : 'border-black'} pb-4`}>
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.5 }}
-        className="my-20 flex items-end justify-center text-center text-4xl"
+        className=" flex font-['Bebas_Neue'] mt-10 text-5xl  justify-center text-center items-center"
       >
         <MdSmartToy className="mx-2" /> {t('Technologies')}
       </motion.h2>
 
       <motion.div
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -100 }}
+        initial={{ scale: 0, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="flex flex-wrap items-center justify-center gap-4"
+        className="flex max-w-3xl mx-auto flex-wrap items-center justify-center gap-4"
       >
         <motion.div
           whileHover={{ scale: 1.1, y: 0 }}
@@ -227,11 +227,7 @@ const Technilgies = (duration, Dark) => {
           className="rounded-2xl  flex
            items-center justify-center size-[111px]  my-3 hover:border-white  transition-all border-4 border-neutral-700 p-4"
         >
-          <img
-            src="\sv.png"
-            className="!w-full  rounded"
-            alt="scn"
-          />
+          <img src="\sv.png" className="!w-full  rounded" alt="scn" />
         </motion.div>
       </motion.div>
     </div>
