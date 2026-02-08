@@ -69,8 +69,6 @@ export const PROJECTS = [
     technologies: [
       'Next.js',
       'React',
-      'Angular',
-      'Nest.js',
       'Node.js',
       'Express',
       'MongoDB',

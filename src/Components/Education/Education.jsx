@@ -50,7 +50,7 @@ const Education = ({ Dark }) => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="mx-auto w-full lg:w-3/4 px-4"
+        className="mx-auto  w-full lg:w-3/4 px-4"
       >
         <motion.div
           variants={itemVariants}
@@ -60,7 +60,7 @@ const Education = ({ Dark }) => {
             boxShadow: Dark ? '0 20px 40px rgba(255,255,255,0.15)' : '0 20px 40px rgba(0,0,0,0.15)',
           }}
           transition={{ type: 'spring', stiffness: 120 }}
-          className={`rounded-2xl w-3/4  mx-auto border p-6 backdrop-blur-md ${
+          className={`rounded-2xl w-full lg:w-3/4  mx-auto border p-6 backdrop-blur-md ${
             Dark ? 'border-white/30 bg-white/5 text-white' : 'border-black/20 bg-black/5 text-black'
           }`}
         >

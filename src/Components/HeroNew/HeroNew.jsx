@@ -127,7 +127,7 @@ function HeroNew({ Dark }) {
           {/* CV Button */}
           <div className="flex justify-center">
             <motion.a
-              href="https://drive.usercontent.google.com/download?id=15fk1kj_ZWBb8mCztiFNv5-ussFqbQtNV&export=download&authuser=0&confirm=t&uuid=6f074ccd-2573-41a0-aeda-d9b92c20eb0d&at=APcXIO3-lVsczDwKjpMXtM3-4TmA:1769803454661"
+              href="https://drive.usercontent.google.com/download?id=1rW65LjHqa2dl1WEvJfGL50HqpcWswkJ2&export=download&authuser=0&confirm=t&uuid=d2eb58f4-4279-45fe-be40-51efac5583c0&at=APcXIO1vkw1_akSBaFvU0Nsq1CKm:1770561922013"
               target="_blank"
               download
               whileHover={{ scale: 1.08 }}
